@@ -9,8 +9,8 @@ services:
       - db_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
-    ports:
-      - 5432:5432
+    # ports:
+    #   - 5432:5432
 
   backend:
     image: sivikgosh/backend_11:latest
@@ -52,8 +52,5 @@ volumes:
   db_data:
     external: true
   static:
-    external: true
   media:
-    external: true
   frontend:
-    external: true
